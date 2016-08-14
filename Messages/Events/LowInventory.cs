@@ -1,8 +1,8 @@
 ﻿using NServiceBus;
 
-namespace Messages.Commands
+namespace Messages.Events
 {
-    public class ReplishInventory : ICommand
+    public class LowInventory : IEvent
     {
         public string Ship { get; set; }
     }

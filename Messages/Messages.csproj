@@ -47,6 +47,9 @@
   <ItemGroup>
     <Compile Include="Commands\InitializeShipInventory.cs" />
     <Compile Include="Commands\PlaceOrder.cs" />
+    <Compile Include="Commands\RestockInventory.cs" />
+    <Compile Include="Events\LowInventory.cs" />
+    <Compile Include="Events\ShipCompleted.cs" />
     <Compile Include="ConfigErrorQueue.cs" />
     <Compile Include="Events\OrderPlaced.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

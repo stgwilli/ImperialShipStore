@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NServiceBus;
 
 namespace ManufacturingEndpoint
@@ -11,7 +7,7 @@ namespace ManufacturingEndpoint
     {
         static void Main(string[] args)
         {
-            Console.Title = "Imperial Ship Store - Sales Endpoint";
+            Console.Title = "Imperial Ship Store - Manufactruing Endpoint";
             var busConfiguration = new BusConfiguration();
             busConfiguration.EndpointName("ImperialShipStore.Manufacturing");
             busConfiguration.UseSerialization<JsonSerializer>();
