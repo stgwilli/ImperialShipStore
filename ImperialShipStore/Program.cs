@@ -34,7 +34,7 @@ namespace ImperialShipStore
             {
                 foreach (var ship in _ships)
                 {
-                    bus.Send("ImperialShipStore.Inventory", new InitializeShipInventory { Ship = ship, InventoryCount = rnd.Next(10)});
+                    bus.Send("ImperialShipStore.Inventory", new InitializeShipInventory { Ship = ship, InventoryCount = rnd.Next(2, 5)});
                 }
                 SendOrder(bus);
             }
