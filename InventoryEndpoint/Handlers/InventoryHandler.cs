@@ -27,7 +27,7 @@ namespace InventoryEndpoint.Handlers
 
             if (Data.NumberInInventory < 3)
             {
-                log.Info($"Inventory log for {Data.Ship}.");
+                log.Warn($"Low Inventory for {Data.Ship}.");
                 bus.Publish(new LowInventory {Ship = Data.Ship});
             }
         }
