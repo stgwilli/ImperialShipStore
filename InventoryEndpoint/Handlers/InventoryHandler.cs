@@ -24,6 +24,7 @@ namespace InventoryEndpoint.Handlers
             log.Info($"Order Placed for 1 {message.Ship}.");
             Data.NumberInInventory -= 1;
             log.Info($"Inventory for {Data.Ship} now at {Data.NumberInInventory}");
+            Bus.Publish(new InventoryUpdated { Ship = Data.Ship, Count = Data.NumberInInventory });
 
             if (Data.NumberInInventory < 3)
             {
@@ -50,6 +51,7 @@ namespace InventoryEndpoint.Handlers
             log.Info($"Received shipment of {message.Amount} new {message.Ship}.");
             Data.NumberInInventory += message.Amount;
             log.Info($"Inventory of {Data.Ship} now at {Data.NumberInInventory}");
+            Bus.Publish(new InventoryUpdated { Ship = Data.Ship, Count = Data.NumberInInventory });
         }
     }
 }

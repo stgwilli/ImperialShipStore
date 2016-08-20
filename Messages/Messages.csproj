@@ -48,6 +48,7 @@
     <Compile Include="Commands\InitializeShipInventory.cs" />
     <Compile Include="Commands\PlaceOrder.cs" />
     <Compile Include="Commands\RestockInventory.cs" />
+    <Compile Include="Events\InventoryUpdated.cs" />
     <Compile Include="Events\LowInventory.cs" />
     <Compile Include="Events\ShipCompleted.cs" />
     <Compile Include="ConfigErrorQueue.cs" />

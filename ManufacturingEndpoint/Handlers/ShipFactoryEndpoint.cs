@@ -23,8 +23,8 @@ namespace ManufacturingEndpoint.Handlers
             int numberOfShipsToBuild = rnd.Next(1, 5);
             log.Info($"Low inventory for {message.Ship}. Starting construction of {numberOfShipsToBuild} new {message.Ship}");
 
-            // sleep 10 seconds
-            Thread.Sleep(10000);
+            // sleep random number of seconds
+            Thread.Sleep(rnd.Next(1, 5) * 1000);
             bus.Send("ImperialShipStore.Inventory",
                 new RestockInventory {Ship = message.Ship, Amount = numberOfShipsToBuild});
             log.Info($"Completed building {numberOfShipsToBuild} {message.Ship}.");
